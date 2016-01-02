@@ -458,5 +458,19 @@ Serial: 125000 Baud 8n1      _ xxxx xxxx - ---
   Stream[11]  = highByte(channel[0])<<6 | highByte(channel[1])<<4 | highByte(channel[2])<<2 | highByte(channel[3])
   Stream[12]  = highByte(channel[4])<<6 | highByte(channel[5])<<4 | highByte(channel[6])<<2 | highByte(channel[7])
   Stream[13]  = lowByte(CRC16(Stream[0..12])
+
+
+  The option_range is only used by Frsky to fine tune frequency
+
+  The autobind/bind flag are currently identical and are used by FlySky, FrSky, HiSky,
+  KN and V2x2 protocol.
+
+  Range flage is protocol idenpendet and controls the send power of the radio module.
+
+  The RxNum is used by all protocol that use a TX ID. Either by a special field in the
+  protocol or by using different TX IDs for protocol that have no sepcial field. Protocol using
+  TX ID are currently KN, Hisky, DSM2.
+
+
 */
 
